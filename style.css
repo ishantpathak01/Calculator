@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle, rgba(27, 64, 57, 1) 0%, rgba(171, 204, 199, 0.99) 100%);
+    font-family: sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    position: relative;
+}
+
+nav img {
+    margin-top: 40px;
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+}
+
+/* Hide logo on screens smaller than 1024px */
+@media (max-width: 1023px) {
+    nav img {
+        display: none;
+    }
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 3px solid rgb(149, 255, 230);
+    box-shadow: 0 0 30px #ffffff80;
+    width: 70rem;
+    max-width: 25rem;
+    margin: 0 auto;
+}
+
+.text {
+    height: 90px;
+    width: 100%;
+    font-size: 3.5rem;
+    padding: 0 10px;
+    color: #212021;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    text-align: right;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.text::placeholder {
+    font-size: 3rem;
+    color: #000000;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.button button {
+    flex: 1;
+    height: 80px;
+    font-size: 1.5rem;
+    margin: 5px;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    background-color: #2d4641;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button button:hover {
+    background-color: #0f3c34;
+}
+
+.credit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: #ffffff;
+    margin-top: 20px;
+    text-align: center;
+    gap: 9px;
+}
+
+.name-highlight {
+    color: #00c656;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.name-highlight:hover {
+    text-shadow: 0 0 5px #038f81, 0 0 10px #004f47, 0 0 20px #00ffe7;
+    color: #00ffaa;
+}
+
