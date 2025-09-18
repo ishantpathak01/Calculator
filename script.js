@@ -14,6 +14,8 @@ document.querySelectorAll("button").forEach(button => {
       result += "*";
     } else if (value === "÷") {
       result += "/";
+    } else if (value === "CE") {
+      result = "0";
     } else {
       result += value;
     }
@@ -21,3 +23,4 @@ document.querySelectorAll("button").forEach(button => {
     document.querySelector(".text").value = result;
   });
 });
+
